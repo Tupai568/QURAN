@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgb(24, 21, 21);
+  --main-color: rgb(72, 69, 69);
+  --text-color: rgb(0, 189, 189);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 5rem 5%;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  width: 100%;
+  z-index: 999;
+}
+
+.lis {
+  position: absolute;
+  list-style: none;
+  top: 0;
+  left: 0;
+  width: 50%;
+  background: var(--bg-color);
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+.lis ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+.active {
+  transform: translateX(0);
+}
+
+.navbar ul li {
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+.navbar ul li:hover {
+  background: var(--text-color);
+}
+
+.navbar ul li:hover a {
+  color: var(--bg-color);
+}
+
+.navbar ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navbar ul li .bx {
+  color: white;
+  padding: 1rem;
+}
+
+.bx-menu {
+  z-index: 999;
+  font-size: 2rem;
+  padding: 0.8rem;
+}
+
+input[type="text"] {
+  width: 20rem;
+  height: 2rem;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 0.3rem;
+  padding: 1rem;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color);
+}
+
+.mencari {
+  position: relative;
+  display: inline-block;
+}
+
+.bx-search-alt-2 {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+
+.listSurah {
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.listSurah ul {
+  display: flex;
+  list-style: none;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.listSurah ul li {
+  padding: 0.1rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.dataSurah {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.boxAyat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  width: 20rem;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 0.5rem;
+}
+
+.boxAyat:hover {
+  box-shadow: 0 0 10px var(--text-color);
+}
+
+.boxAyat:hover .number {
+  background: var(--bg-color);
+  box-shadow: 0 0 10px var(--text-color);
+  color: var(--text-color);
+}
+
+.gabung {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--text-color);
+  transform: rotate(49deg);
+  border-radius: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.number h1 {
+  font-size: 0.7rem;
+  font-weight: bold;
+  transform: rotate(-49deg);
+}
+
+.judul {
+  padding: 1rem;
+  font-size: 0.6rem;
+  color: var(--text-color);
+}
+
+.totalAyat {
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.resultSurah {
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--main-color);
+  color: var(--text-color);
+  padding: 1rem;
+}
+
+.box h1 {
+  direction: rtl;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.box h4 {
+  direction: ltr;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
